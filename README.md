@@ -112,11 +112,6 @@ El programa no valida el contenido de los archivos, por lo que conviene tener en
 | Prueba | `f1.txt` | `f2.txt` | `L` |
 |---|---|---|---|
 | 1 (práctica) | `45` | `12` | 1 |
-| 2 | `45`, `8`, `30` | `12`, `50`, `2` | 1 |
-| 3 | `5 9 │ 1 4 │ 6 8` | `2 7 │ 3 8 │ 10 11` | 2 |
-| 4 | `1 4 │ 6` | `2 3 │ 5 7` | 2 |
-
-(Un número por renglón; la barra `│` solo separa los bloques. Para las pruebas 3 y 4 cambia el último argumento de `intercalarBloques` en `main` a `2`.)
 
 ## Cómo clonar, compilar y ejecutar
 
@@ -165,22 +160,6 @@ Contenido de `f3.txt`:
 45
 ```
 
-**Prueba 2** (`L = 1`) con `f1.txt = 45, 8, 30` y `f2.txt = 12, 50, 2`. Consola:
-
-```text
-Bloque intercalado con exito!
-```
-
-Contenido de `f3.txt`:
-
-```text
-12
-45
-8
-50
-2
-30
-```
 
 **Si falta `f1.txt` o `f2.txt`:**
 
@@ -197,9 +176,3 @@ La columna «Solo TODO» es lo que produce el código base con únicamente los t
 | Prueba | Resultado esperado | Código final (con ajustes) | Solo TODO |
 |---|---|---|---|
 | 1 | `12 45` | `12 45` | `12` |
-| 2 | `12 45 │ 8 50 │ 2 30` | `12 45 8 50 2 30` | `12 45 50 2` |
-| 3 | `2 5 7 9 │ 1 3 4 8 │ 6 8 10 11` | `2 5 7 9 1 3 4 8 6 8 10 11` | `2 5 7 9 3 8 10 11` |
-| 4 | `1 2 3 4 │ 5 6 7` | `1 2 3 4 5 6 7` | `1 2 3 4 5 7` |
-
-- Con los dos ajustes, el resultado coincide con el esperado en las cuatro pruebas y no se pierde ningún elemento.
-- Cada par de bloques de tamaño `L` produce un bloque ordenado de tamaño `2L` (en la prueba 3, bloques de 4 elementos).
